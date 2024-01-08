@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      /* Add your existing styles here */
+
+      .slide-in {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+
+      .slide-in.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+    transition-delay: 0.2s; /* Add a delay of 0.2 seconds */
+  }
+
+  .slide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s, transform 0.5s;
+    transition-delay: 0.2s; /* Add a delay of 0.2 seconds */
+  }
+
+  .slide-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+    </style>
+    
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">WELCOME</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">WELCOME</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./assets/profile-pic.png"
+          alt="Akshat Joshi profile picture"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title ">Akshat Joshi</h1>
+        <p class="section__text__p2 "><span id="typed-text">Frontend Developer</span></p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-2" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.svg"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/akshat-joshi-28077b221'"
+          />
+          <img
+            src="./assets/github.svg"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Ajddn'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1 ">Get To Know More</p>
+      <h1 class="title slide-in">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            style="width: 420px"
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3 style="position: relative; bottom: 30px">Experience</h3>
+              <p>2+ years <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3 style="position: relative; bottom: 30px">Education</h3>
+              <p>(B.tech) Bachelors of technology <br />in computer science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am a dedicated professional with a strong background in web
+              development and a passion for creative problem-solving. Driven by
+              a relentless pursuit of quality, I excel in web development and
+              problem-solving, consistently delivering impactful results. With a
+              commitment to excellence, I bring expertise in crafting innovative
+              solutions and contributing to successful projects. My skills in
+              web development, coupled with a proactive approach, make me a
+              valuable asset to any team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title slide-in">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container slide-left">
+            <h2 class="experience-sub-title">Frontend Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML 5</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS 3</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bootstrap 5</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container slide-right">
+            <h2 class="experience-sub-title">Other Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Mongodb</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Github</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>DSA</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C/C++</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title slide-in">Projects</h1>
+      <div class="experience-details-container projectcontainers">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Hostel Web App</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Ajddn/Hotel_booking_reactAPP'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://hotel-booking-react-app.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container aboveimage">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Movie Web App</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Ajddn/movie_app'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://movie-app-nu-sandy.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                style="height: 250px"
+                src="./assets/project-3.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Admin Dashboard</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Ajddn/REACT_ADMIN_DASHBOARD_FRONTEND_ONLY'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://react-admin-dashboard-frontend-only.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <br />
+          <div
+            style="position: relative; right: 22px"
+            class="details-container color-container"
+          >
+            <div class="article-container">
+              <img
+                style="height: 250px"
+                src="./assets/project-4.png"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Food Delivery App
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Ajddn/Food_delivery_express_Mern_stack_app'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://food-delivery-express-mern-stack-app.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title slide-in">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/gmail.svg"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:joshiakshat133@gmail.com"
+              >joshiakshat133@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.svg"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://linkedin.com/in/akshat-joshi-28077b221"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Akshat Joshi. All Rights Reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const options = {
+          strings: ['Frontend Developer'], // Add more strings if needed
+          typeSpeed: 40, // Typing speed in milliseconds
+          backSpeed: 100,
+          showCursor: true, // Show blinking cursor
+          loop: true,
+        };
+    
+        const typed = new Typed('#typed-text', options);
+      });
+    </script>
+     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function slideIn(element) {
+          element.classList.add('active');
+        }
+    
+        function slideOut(element) {
+          element.classList.remove('active');
+        }
+    
+        function toggleAnimations() {
+          const slideInElements = document.querySelectorAll('.slide-in');
+          const windowHeight = window.innerHeight;
+    
+          slideInElements.forEach((element) => {
+            const positionFromTop = element.getBoundingClientRect().top;
+    
+            if (positionFromTop - windowHeight <= 0) {
+              slideIn(element);
+            } else {
+              slideOut(element);
+            }
+          });
+        }
+    
+        function startAnimations() {
+          setInterval(function () {
+            toggleAnimations();
+          }, 2000); // Adjust the duration of each loop as needed
+        }
+    
+        // Initial check when the page loads
+        toggleAnimations();
+    
+        // Start animations when the user scrolls
+        window.addEventListener('scroll', toggleAnimations);
+    
+        // Start the loop after a delay
+        setTimeout(startAnimations, 1000); // Adjust the delay time as needed
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function checkScroll() {
+          const slideLeftElements = document.querySelectorAll('.slide-left');
+          const slideRightElements = document.querySelectorAll('.slide-right');
+          const windowHeight = window.innerHeight;
+    
+          slideLeftElements.forEach((element) => {
+            const positionFromTop = element.getBoundingClientRect().top;
+    
+            if (positionFromTop - windowHeight <= 0) {
+              element.classList.add('active');
+            } else {
+              element.classList.remove('active');
+            }
+          });
+    
+          slideRightElements.forEach((element) => {
+            const positionFromTop = element.getBoundingClientRect().top;
+    
+            if (positionFromTop - windowHeight <= 0) {
+              element.classList.add('active');
+            } else {
+              element.classList.remove('active');
+            }
+          });
+        }
+    
+        // Initial check when the page loads
+        checkScroll();
+    
+        // Check when the user scrolls
+        window.addEventListener('scroll', checkScroll);
+      });
+    </script>
+    
+  </body>
+</html>
