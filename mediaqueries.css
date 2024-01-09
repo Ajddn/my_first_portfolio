@@ -10,6 +10,15 @@
   #projects {
     height: fit-content;
   }
+  .movieimg{
+    height: 350px;
+  }
+  .moviediv{
+    height: 490px;
+  }
+  .moviedown{
+    margin-top: 120px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -100,4 +109,37 @@
   .text-container {
     text-align: justify;
   }
+}
+
+
+@media screen and (max-width: 480px){
+  .anotherdeatils{
+      height: 162px;
+  }
+
+  .fooddiv{
+   position: relative;
+   left: 2px;
+   height: 470px;
+  }
+
+  .foodimage{
+    height: 350px;
+  }
+  
+
+  .dashidiv{
+   position: relative;
+   left: 15px;
+    height: 470px;
+    width: 380px;
+  }
+
+  .dashimg{
+    height: 350px;
+  }
+  
+  
+ 
+
 }
