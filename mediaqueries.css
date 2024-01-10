@@ -131,14 +131,23 @@
   .dashidiv{
    position: relative;
    left: 15px;
-    height: 470px;
-    width: 380px;
+    height: fit-content;
+    width: 89%;
   }
 
   .dashimg{
     height: 350px;
   }
+  .node{
+   margin-right: 4px;
+  }
+  .github{
+    margin-right: 20px;
+  }
   
+  .cplus{
+    margin-right: 23px;
+  }
   
  
 
