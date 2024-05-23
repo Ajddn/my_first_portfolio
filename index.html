@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="mediaqueries.css" />
     <style>
       /* Add your existing styles here */
-
-      
-
       .slide-in {
         opacity: 0;
         transform: translateY(50px);
@@ -46,6 +43,38 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+
+  .oneprojects{
+    margin-bottom: 450px; 
+  }
+  .addingmore {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .nextheight{
+    height: 250px;
+  }
+
+  @media (max-width: 480px) {
+    .addingmore {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, auto);
+      gap: 50px; 
+    }
+    .oneprojects{
+    margin-bottom: 0; 
+  }
+  .nextheight{
+    height: 300px;
+  }
+
+  }
+  
+
     </style>
     
   </head>
@@ -223,7 +252,7 @@
                 />
                 <div>
                   <h3>React.js</h3>
-                  <p>Intermediate</p>
+                  <p>Experienced</p>
                 </div>
               </article>
               <article>
@@ -234,7 +263,7 @@
                 />
                 <div>
                   <h3>Material UI</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
             </div>
@@ -249,8 +278,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Mongodb</h3>
-                  <p>Basic</p>
+                  <h3>Next 14</h3>
+                  <p>Intermediate</p>
                 </div>
               </article>
 
@@ -273,7 +302,7 @@
                 />
                 <div>
                   <h3>Express JS</h3>
-                  <p>Basic</p>
+                  <p>Experienced</p>
                 </div>
               </article>
               <article>
@@ -314,11 +343,11 @@
         </div>
       </div>
     </section>
-    <section id="projects">
+    <section class="oneprojects" id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title slide-in">Projects</h1>
-      <div class="experience-details-container projectcontainers">
-        <div class="about-containers">
+      <div  class="experience-details-container projectcontainers">
+        <div   class="about-containers addingmore">
           <div class="details-container color-container">
             <div class="article-container">
               <img
@@ -373,7 +402,7 @@
                 
                 src="./assets/project-3.jpg"
                 alt="Project 3"
-                class="project-img dashimg"
+                class="project-img dashimg nextheight"
               />
             </div>
             <h2 class="experience-sub-title project-title dashdown">Admin Dashboard</h2>
@@ -392,9 +421,9 @@
               </button>
             </div>
           </div>
-          <br />
+          
           <div
-            style="position: relative; right: 22px"
+           
             class="details-container color-container fooddiv"
           >
             <div class="article-container ">
@@ -423,8 +452,111 @@
               </button>
             </div>
           </div>
+
+
+          <!-- next .js projects -->
+          <div
+         
+          class="details-container color-container fooddiv"
+        >
+          <div class="article-container ">
+            <img
+            
+              src="./assets/project5.jpg"
+              alt="Project 4"
+              class="project-img  nextheight"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title foodown">
+             LANDING PAGE
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Ajddn/next.js_travel_landingpage'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://next-js-travel-landing.vercel.app/'"
+            >
+              Live Demo
+            </button>
+          </div>
         </div>
-      </div>
+
+
+
+
+        <!-- project 2 -->
+
+        <div
+           
+            class="details-container color-container fooddiv"
+          >
+            <div class="article-container ">
+              <img
+              
+                src="./assets/project6.jpg"
+                alt="Project 4"
+                class="project-img nextheight"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title foodown">
+               MEET CLONE
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Ajddn/zoom-clone-NEXT14'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://zoom-clone-flax.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+
+          <!-- project 3  style="height: 390px;"-->
+
+          <div 
+          class= "details-container color-container fooddiv">
+          <div class="article-container ">
+            <img
+              
+              src="./assets/project7.png"
+              alt="Project 4"
+              class="project-img nextheight"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title foodown">
+             WEB IDE
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Ajddn/next-web-dev-ide'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://next-webide-eta.vercel.app/'"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        </div>
+
+
+        
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>

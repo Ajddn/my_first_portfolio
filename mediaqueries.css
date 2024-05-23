@@ -76,6 +76,8 @@
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
+   
+   
   }
   .contact-info-container {
     margin: 0;
@@ -130,25 +132,18 @@
 
   .dashidiv{
    position: relative;
-   left: 15px;
-    height: fit-content;
-    width: 89%;
+   left: 5px;
+   height: fit-content;
+   width: 89%;
   }
 
   .dashimg{
-    height: 350px;
+    height: 650px;
   }
-  .node{
-   margin-right: 4px;
-  }
-  .github{
-    margin-right: 20px;
-  }
-  
-  .cplus{
-    margin-right: 23px;
-  }
-  
- 
 
+  .addingmore{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+  }
+  
 }
